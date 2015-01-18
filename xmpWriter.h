@@ -21,6 +21,6 @@
 @property (readonly) NSArray *supportedFormats;
 
 -(void)loadModule:(NSURL *)moduleReadURL error:(NSError *__autoreleasing *)error;
--(void)writeModule:(NSURL *)moduleWriteURL error:(NSError *__autoreleasing *)error;
+-(void)writeModuleWAV:(NSURL *)moduleWriteURL error:(NSError *__autoreleasing *)error;
 
 @end

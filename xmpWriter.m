@@ -51,7 +51,7 @@
     return;
 }
 
--(void)writeModule:(NSURL *)moduleWritePath error:(NSError *__autoreleasing *)error
+-(void)writeModuleWAV:(NSURL *)moduleWritePath error:(NSError *__autoreleasing *)error
 {
     // Set up some structures we're going to need
     struct xmp_frame_info writer_info;

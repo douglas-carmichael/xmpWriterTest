@@ -32,7 +32,7 @@ int main(int argc, const char * argv[]) {
 
         // write it to a WAV
         NSLog(@"Writing to a WAV: %@", wavePath);
-        [myWriter writeModule:waveURL error:nil];
+        [myWriter writeModuleWAV:waveURL error:nil];
         
         // We're done
         NSLog(@"We're done!");
