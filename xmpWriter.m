@@ -56,8 +56,8 @@
     // Set up some structures we're going to need
     struct xmp_frame_info writer_info;
     UInt32 frame_size;
-    AudioStreamBasicDescription writeModFormat = {};
-    AudioChannelLayout writeModLayout = {};
+    AudioStreamBasicDescription inputFormat = {};
+    AudioChannelLayout inputLayout = {};
     AudioBufferList writeModBuffer = {};
     ExtAudioFileRef writeModRef = NULL;
     
@@ -80,15 +80,15 @@
     }
     
     // Set up our ASBD and layout (44.1kHz 16-bit stereo)
-    writeModFormat.mSampleRate = 44100;
-    writeModFormat.mFormatID = kAudioFormatLinearPCM;
-    writeModFormat.mFormatFlags = kAudioFormatFlagIsSignedInteger | kAudioFormatFlagIsPacked;
-    writeModFormat.mChannelsPerFrame = 2;
-    writeModFormat.mFramesPerPacket = 1;
-    writeModFormat.mBitsPerChannel = 16;
-    writeModFormat.mBytesPerFrame = 4;
-    writeModFormat.mBytesPerPacket = 4;
-    writeModLayout.mChannelLayoutTag = kAudioChannelLayoutTag_Stereo;
+    inputFormat.mSampleRate = 44100;
+    inputFormat.mFormatID = kAudioFormatLinearPCM;
+    inputFormat.mFormatFlags = kAudioFormatFlagIsSignedInteger | kAudioFormatFlagIsPacked;
+    inputFormat.mChannelsPerFrame = 2;
+    inputFormat.mFramesPerPacket = 1;
+    inputFormat.mBitsPerChannel = 16;
+    inputFormat.mBytesPerFrame = 4;
+    inputFormat.mBytesPerPacket = 4;
+    inputLayout.mChannelLayoutTag = kAudioChannelLayoutTag_Stereo;
     
     // Set up our audio buffer list
     writeModBuffer.mNumberBuffers = 1;
@@ -98,7 +98,7 @@
     
     // Create our audio file
     err = ExtAudioFileCreateWithURL((__bridge CFURLRef)(moduleWritePath), kAudioFileWAVEType,
-                                    &writeModFormat, &writeModLayout, kAudioFileFlags_EraseFile, &writeModRef);
+                                    &inputFormat, &inputLayout, kAudioFileFlags_EraseFile, &writeModRef);
     if(err != noErr)
     {
         if (error != NULL)
@@ -118,7 +118,7 @@
     }
     
     // Start playback
-    status = xmp_start_player(writer_context, writeModFormat.mSampleRate, 0);
+    status = xmp_start_player(writer_context, inputFormat.mSampleRate, 0);
     
     do
     {
@@ -127,10 +127,10 @@
             break;
         
         writeModBuffer.mBuffers[0].mDataByteSize = writer_info.buffer_size;
-        writeModBuffer.mBuffers[0].mNumberChannels = writeModFormat.mChannelsPerFrame;
+        writeModBuffer.mBuffers[0].mNumberChannels = inputFormat.mChannelsPerFrame;
         writeModBuffer.mBuffers[0].mData = writer_info.buffer;
         
-        frame_size = writer_info.buffer_size / writeModFormat.mBytesPerFrame;
+        frame_size = writer_info.buffer_size / inputFormat.mBytesPerFrame;
         
         err = ExtAudioFileWrite(writeModRef, frame_size, &writeModBuffer);
         
