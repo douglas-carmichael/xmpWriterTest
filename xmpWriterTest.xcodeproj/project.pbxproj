@@ -10,6 +10,7 @@
 		A301B88B1A6BE4360040102E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A301B88A1A6BE4360040102E /* main.m */; };
 		A301B8931A6BE5650040102E /* xmpWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = A301B8921A6BE5650040102E /* xmpWriter.m */; };
 		A301B8961A6BE6820040102E /* libxmp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A301B8951A6BE6820040102E /* libxmp.a */; };
+		A31C5B841AAC124A002235ED /* Module.m in Sources */ = {isa = PBXBuildFile; fileRef = A31C5B831AAC124A002235ED /* Module.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -32,6 +33,8 @@
 		A301B8951A6BE6820040102E /* libxmp.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libxmp.a; sourceTree = "<group>"; };
 		A301B8971A6BE68C0040102E /* xmp.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = xmp.h; sourceTree = "<group>"; };
 		A301B8991A6BECCD0040102E /* xmpWriterErrors.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = xmpWriterErrors.h; sourceTree = "<group>"; };
+		A31C5B821AAC124A002235ED /* Module.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Module.h; sourceTree = "<group>"; };
+		A31C5B831AAC124A002235ED /* Module.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Module.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -50,6 +53,7 @@
 			isa = PBXGroup;
 			children = (
 				A301B8891A6BE4360040102E /* xmpWriterTest */,
+				A31C5B851AAC1250002235ED /* Module class */,
 				A301B8881A6BE4360040102E /* Products */,
 			);
 			sourceTree = "<group>";
@@ -89,6 +93,15 @@
 				A301B8951A6BE6820040102E /* libxmp.a */,
 			);
 			name = libxmp;
+			sourceTree = "<group>";
+		};
+		A31C5B851AAC1250002235ED /* Module class */ = {
+			isa = PBXGroup;
+			children = (
+				A31C5B821AAC124A002235ED /* Module.h */,
+				A31C5B831AAC124A002235ED /* Module.m */,
+			);
+			name = "Module class";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -147,6 +160,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A31C5B841AAC124A002235ED /* Module.m in Sources */,
 				A301B8931A6BE5650040102E /* xmpWriter.m in Sources */,
 				A301B88B1A6BE4360040102E /* main.m in Sources */,
 			);
@@ -270,6 +284,7 @@
 				A301B8901A6BE4360040102E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

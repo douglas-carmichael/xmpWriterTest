@@ -35,9 +35,9 @@
     return self;
 }
 
--(void)loadModule:(NSURL *)moduleReadURL error:(NSError *__autoreleasing *)error
+-(void)loadModule:(Module *)ourModule error:(NSError *__autoreleasing *)error
 {
-    if (xmp_load_module(writer_context, (char *)[moduleReadURL.path UTF8String]) != 0)
+    if (xmp_load_module(writer_context, (char *)[[ourModule filePath].path UTF8String]) != 0)
     {
         if (error != NULL)
         {

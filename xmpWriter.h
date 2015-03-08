@@ -9,6 +9,7 @@
 #import <Foundation/Foundation.h>
 #import <AudioToolbox/AudioToolbox.h>
 #import "xmp.h"
+#import "Module.h"
 
 @interface xmpWriter : NSObject
 
@@ -20,7 +21,7 @@
 @property (readonly) NSString *xmpVersion;
 @property (readonly) NSArray *supportedFormats;
 
--(void)loadModule:(NSURL *)moduleReadURL error:(NSError *__autoreleasing *)error;
+-(void)loadModule:(Module *)ourModule error:(NSError *__autoreleasing *)error;
 -(void)writeModuleWAV:(NSURL *)moduleWriteURL error:(NSError *__autoreleasing *)error;
 
 @end
