@@ -9,8 +9,8 @@
 /* Begin PBXBuildFile section */
 		A301B88B1A6BE4360040102E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A301B88A1A6BE4360040102E /* main.m */; };
 		A301B8931A6BE5650040102E /* xmpWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = A301B8921A6BE5650040102E /* xmpWriter.m */; };
-		A301B8961A6BE6820040102E /* libxmp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A301B8951A6BE6820040102E /* libxmp.a */; };
 		A31C5B841AAC124A002235ED /* Module.m in Sources */ = {isa = PBXBuildFile; fileRef = A31C5B831AAC124A002235ED /* Module.m */; };
+		A347ED201AC32A21003E55A4 /* libxmp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A347ED1F1AC32A21003E55A4 /* libxmp.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -30,11 +30,11 @@
 		A301B88A1A6BE4360040102E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		A301B8911A6BE5650040102E /* xmpWriter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = xmpWriter.h; path = ../xmpWriter.h; sourceTree = "<group>"; };
 		A301B8921A6BE5650040102E /* xmpWriter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = xmpWriter.m; path = ../xmpWriter.m; sourceTree = "<group>"; };
-		A301B8951A6BE6820040102E /* libxmp.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libxmp.a; sourceTree = "<group>"; };
-		A301B8971A6BE68C0040102E /* xmp.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = xmp.h; sourceTree = "<group>"; };
 		A301B8991A6BECCD0040102E /* xmpWriterErrors.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = xmpWriterErrors.h; sourceTree = "<group>"; };
 		A31C5B821AAC124A002235ED /* Module.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Module.h; sourceTree = "<group>"; };
 		A31C5B831AAC124A002235ED /* Module.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Module.m; sourceTree = "<group>"; };
+		A347ED1F1AC32A21003E55A4 /* libxmp.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libxmp.a; sourceTree = "<group>"; };
+		A347ED211AC32A36003E55A4 /* xmp.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = xmp.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -42,7 +42,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A301B8961A6BE6820040102E /* libxmp.a in Frameworks */,
+				A347ED201AC32A21003E55A4 /* libxmp.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -89,8 +89,8 @@
 		A301B8981A6BE6910040102E /* libxmp */ = {
 			isa = PBXGroup;
 			children = (
-				A301B8971A6BE68C0040102E /* xmp.h */,
-				A301B8951A6BE6820040102E /* libxmp.a */,
+				A347ED211AC32A36003E55A4 /* xmp.h */,
+				A347ED1F1AC32A21003E55A4 /* libxmp.a */,
 			);
 			name = libxmp;
 			sourceTree = "<group>";
