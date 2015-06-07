@@ -185,7 +185,7 @@
     // Set up our audio buffer list
     writeModBuffer.mNumberBuffers = 1;
     
-    // Create our audio file (44.1kHz 16-bit stereo WAV)
+    // Create our audio file (44.1kHz 16-bit stereo AIFF)
     // NOTE: Audio Converter Services will be required to convert audio into other formats
     
     // Create our audio file
