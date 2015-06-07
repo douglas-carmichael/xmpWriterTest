@@ -10,7 +10,7 @@
 		A301B88B1A6BE4360040102E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A301B88A1A6BE4360040102E /* main.m */; };
 		A301B8931A6BE5650040102E /* xmpWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = A301B8921A6BE5650040102E /* xmpWriter.m */; };
 		A31C5B841AAC124A002235ED /* Module.m in Sources */ = {isa = PBXBuildFile; fileRef = A31C5B831AAC124A002235ED /* Module.m */; };
-		A347ED201AC32A21003E55A4 /* libxmp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A347ED1F1AC32A21003E55A4 /* libxmp.a */; };
+		A3475F411B2455B1001785AD /* libxmp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A3475F401B2455B1001785AD /* libxmp.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -34,8 +34,8 @@
 		A31C5B821AAC124A002235ED /* Module.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Module.h; sourceTree = "<group>"; };
 		A31C5B831AAC124A002235ED /* Module.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Module.m; sourceTree = "<group>"; };
 		A3475F3D1B245317001785AD /* runaway.mod */ = {isa = PBXFileReference; lastKnownFileType = file; path = runaway.mod; sourceTree = "<group>"; };
-		A347ED1F1AC32A21003E55A4 /* libxmp.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libxmp.a; sourceTree = "<group>"; };
-		A347ED211AC32A36003E55A4 /* xmp.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = xmp.h; sourceTree = "<group>"; };
+		A3475F3F1B2455A7001785AD /* xmp.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = xmp.h; sourceTree = "<group>"; };
+		A3475F401B2455B1001785AD /* libxmp.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libxmp.a; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,7 +43,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A347ED201AC32A21003E55A4 /* libxmp.a in Frameworks */,
+				A3475F411B2455B1001785AD /* libxmp.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -91,8 +91,8 @@
 		A301B8981A6BE6910040102E /* libxmp */ = {
 			isa = PBXGroup;
 			children = (
-				A347ED211AC32A36003E55A4 /* xmp.h */,
-				A347ED1F1AC32A21003E55A4 /* libxmp.a */,
+				A3475F3F1B2455A7001785AD /* xmp.h */,
+				A3475F401B2455B1001785AD /* libxmp.a */,
 			);
 			name = libxmp;
 			sourceTree = "<group>";
