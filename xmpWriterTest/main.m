@@ -19,16 +19,21 @@ int main(int argc, const char * argv[]) {
         xmpWriter *myWriter;
         myWriter = [[xmpWriter alloc] init];
         
+        Module *myModule;
+        myModule = [[Module alloc] init];
+        
         // set up our paths and URLs
-        NSString *modulePath = @"/Users/dcarmich/wild_impressions.mod";
-        NSString *wavePath = @"/Users/dcarmich/wild_impressions.wav";
+        NSString *modulePath = @"/Users/dcarmich/war.s3m";
+        NSString *wavePath = @"/Users/dcarmich/war.wav";
 
         NSURL *moduleURL = [[NSURL alloc] initFileURLWithPath:modulePath];
         NSURL *waveURL = [[NSURL alloc] initFileURLWithPath:wavePath];
 
+        [myModule setFilePath:moduleURL];
+        
         // load a module into the instance
         NSLog(@"Loading our module: %@", modulePath);
-        [myWriter loadModule:moduleURL error:nil];
+        [myWriter loadModule:myModule error:nil];
 
         // write it to a WAV
         NSLog(@"Writing to a WAV: %@", wavePath);
