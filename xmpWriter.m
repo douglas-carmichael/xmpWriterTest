@@ -130,6 +130,7 @@
         writeModBuffer.mBuffers[0].mNumberChannels = inputFormat.mChannelsPerFrame;
         writeModBuffer.mBuffers[0].mData = writer_info.buffer;
         
+        
         frame_size = writer_info.buffer_size / inputFormat.mBytesPerFrame;
         
         err = ExtAudioFileWrite(writeModRef, frame_size, &writeModBuffer);
@@ -189,7 +190,7 @@
     // NOTE: Audio Converter Services will be required to convert audio into other formats
     
     // Create our audio file
-    err = ExtAudioFileCreateWithURL((__bridge CFURLRef)(moduleWritePath), kAudioFileAIFCType,
+    err = ExtAudioFileCreateWithURL((__bridge CFURLRef)(moduleWritePath), kAudioFileAIFFType,
                                     &inputFormat, &inputLayout, kAudioFileFlags_EraseFile, &writeModRef);
     if(err != noErr)
     {
@@ -221,6 +222,17 @@
         writeModBuffer.mBuffers[0].mDataByteSize = writer_info.buffer_size;
         writeModBuffer.mBuffers[0].mNumberChannels = inputFormat.mChannelsPerFrame;
         writeModBuffer.mBuffers[0].mData = writer_info.buffer;
+        
+        int *ourBuffer = writer_info.buffer;
+        void *new_buffer;
+        new_buffer = malloc((writer_info.buffer_size) * 8);
+        int *ourNewBuffer = new_buffer;
+        int i;
+        
+        for (i = 0; i <= writer_info.buffer_size; i++)
+        {
+            ourNewBuffer[i] = OSSwapHostToBigInt(ourBuffer[i]);
+        };
         
         frame_size = writer_info.buffer_size / inputFormat.mBytesPerFrame;
         

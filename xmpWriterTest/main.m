@@ -25,10 +25,12 @@ int main(int argc, const char * argv[]) {
         // set up our paths and URLs
         NSString *modulePath = @"/Users/dcarmich/war.s3m";
         NSString *wavePath = @"/Users/dcarmich/war.wav";
-
+        NSString *aiffPath = @"/Users/dcarmich/war.aiff";
+        
         NSURL *moduleURL = [[NSURL alloc] initFileURLWithPath:modulePath];
         NSURL *waveURL = [[NSURL alloc] initFileURLWithPath:wavePath];
-
+        NSURL *aiffURL = [[NSURL alloc] initFileURLWithPath:aiffPath];
+        
         [myModule setFilePath:moduleURL];
         
         // load a module into the instance
@@ -38,7 +40,11 @@ int main(int argc, const char * argv[]) {
         // write it to a WAV
         NSLog(@"Writing to a WAV: %@", wavePath);
         [myWriter writeModuleWAV:waveURL error:nil];
-        
+
+        // write it to a AIFF
+        NSLog(@"Writing to a AIFF: %@", aiffPath);
+        [myWriter writeModuleAIFF:aiffURL error:nil];
+
         // We're done
         NSLog(@"We're done!");
         
