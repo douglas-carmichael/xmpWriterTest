@@ -221,19 +221,21 @@
         
         writeModBuffer.mBuffers[0].mDataByteSize = writer_info.buffer_size;
         writeModBuffer.mBuffers[0].mNumberChannels = inputFormat.mChannelsPerFrame;
-        writeModBuffer.mBuffers[0].mData = writer_info.buffer;
         
-        int *ourBuffer = writer_info.buffer;
+        // Set up our buffer to do the endianness swap
         void *new_buffer;
-        new_buffer = malloc((writer_info.buffer_size) * 8);
+        new_buffer = malloc((writer_info.buffer_size) * inputFormat.mBytesPerFrame);
+        int *ourBuffer = writer_info.buffer;
         int *ourNewBuffer = new_buffer;
+        memset(new_buffer, 0, writer_info.buffer_size);
         int i;
         
         for (i = 0; i <= writer_info.buffer_size; i++)
         {
-            ourNewBuffer[i] = OSSwapHostToBigInt(ourBuffer[i]);
+            ourNewBuffer[i] = OSSwapInt32(ourBuffer[i]);
         };
         
+        writeModBuffer.mBuffers[0].mData = ourNewBuffer;
         frame_size = writer_info.buffer_size / inputFormat.mBytesPerFrame;
         
         err = ExtAudioFileWrite(writeModRef, frame_size, &writeModBuffer);
