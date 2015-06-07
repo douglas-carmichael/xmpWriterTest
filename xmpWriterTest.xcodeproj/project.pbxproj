@@ -33,6 +33,7 @@
 		A301B8991A6BECCD0040102E /* xmpWriterErrors.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = xmpWriterErrors.h; sourceTree = "<group>"; };
 		A31C5B821AAC124A002235ED /* Module.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Module.h; sourceTree = "<group>"; };
 		A31C5B831AAC124A002235ED /* Module.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Module.m; sourceTree = "<group>"; };
+		A3475F3D1B245317001785AD /* runaway.mod */ = {isa = PBXFileReference; lastKnownFileType = file; path = runaway.mod; sourceTree = "<group>"; };
 		A347ED1F1AC32A21003E55A4 /* libxmp.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libxmp.a; sourceTree = "<group>"; };
 		A347ED211AC32A36003E55A4 /* xmp.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = xmp.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -54,6 +55,7 @@
 			children = (
 				A301B8891A6BE4360040102E /* xmpWriterTest */,
 				A31C5B851AAC1250002235ED /* Module class */,
+				A3475F3E1B24531F001785AD /* Test Module File */,
 				A301B8881A6BE4360040102E /* Products */,
 			);
 			sourceTree = "<group>";
@@ -102,6 +104,14 @@
 				A31C5B831AAC124A002235ED /* Module.m */,
 			);
 			name = "Module class";
+			sourceTree = "<group>";
+		};
+		A3475F3E1B24531F001785AD /* Test Module File */ = {
+			isa = PBXGroup;
+			children = (
+				A3475F3D1B245317001785AD /* runaway.mod */,
+			);
+			name = "Test Module File";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

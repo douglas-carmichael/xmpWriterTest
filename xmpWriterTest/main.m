@@ -23,9 +23,9 @@ int main(int argc, const char * argv[]) {
         myModule = [[Module alloc] init];
         
         // set up our paths and URLs
-        NSString *modulePath = @"/Users/dcarmich/mercrain.s3m";
-        NSString *wavePath = @"/Users/dcarmich/mercrain.wav";
-        NSString *aiffPath = @"/Users/dcarmich/mercrain.aiff";
+        NSString *modulePath = @"/Users/dcarmich/runaway.mod";
+        NSString *wavePath = @"/Users/dcarmich/runaway.wav";
+        NSString *aiffPath = @"/Users/dcarmich/runaway.aiff";
         
         NSURL *moduleURL = [[NSURL alloc] initFileURLWithPath:modulePath];
         NSURL *waveURL = [[NSURL alloc] initFileURLWithPath:wavePath];
