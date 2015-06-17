@@ -230,9 +230,10 @@
         memset(new_buffer, 0, writer_info.buffer_size);
         int i;
         
-        for (i = 0; i <= writer_info.buffer_size; i++)
+        for (i = 0; i <= writer_info.buffer_size/2; i++)
         {
-            ourNewBuffer[i] = OSSwapInt32(ourBuffer[i]);
+            ourNewBuffer[i*2] = OSSwapInt32(ourBuffer[i*2 + 1]);
+            ourNewBuffer[i*2 + 1] = OSSwapInt32(ourBuffer[i*2]);
         };
         
         writeModBuffer.mBuffers[0].mData = ourNewBuffer;
